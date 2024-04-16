@@ -17,21 +17,22 @@ To get started with an R packages including documentation, it is best to create 
 
 Select the option `New Directory`. The following box should appear.
 
-#### ![New project pop up](images/new_project_pop_up.png)
+![New project pop up](images/new_project_pop_up.png)
 
-Select the option `New Project` \####![New project new repo](images/new_project_select_new_repo.png)
+Select the option `New Project` ![New project new repo](images/new_project_select_new_repo.png)
 
 Now give your directory a name and Browse on your computer for a good place for this R package to live. And click on `Create Project`.
 
-#### ![New project select repo + name](images/new_project_name_repo.png)
+![New project select repo + name](images/new_project_name_repo.png)
 
 You will now find this folder and R project on the location you set the directory. Quite likely, the project did even open in R studio. You will notice this by having the Directory Name in your right top corner of R studio.
 
-#### ![R project open](images/R_project_opened.png)
+![R project open](images/R_project_opened.png)
 
 Within the folder, the R project is shown as a file ending with `.Rproj` .
 
 ## Install required packages
+
 Before we begin, we need to install the `devtools` and `roxygen2` packages. `Devtools` includes a comprehensive set of tools essential for package development, and `roxygen2` facilitates the creation of documentation.
 
 ```{r}
@@ -43,7 +44,77 @@ You might need to restart Rstudio after installing the above packages.
 
 ## Why are we making an R package? What is it?
 
+*Since you have just listed to the keynote speech from Gianluca Baio you know by now and you might skill reading this part. But here some information in case you are still not entirely sure*
+
+Packages in R are collections of code and data created by members of the R community. They have a variety of purposes, ranging from comprehensive and widely used statistical libraries to simpler packages containing functions for knock-knock jokes (really, no joke <https://github.com/psolymos/KnockKnockJokes>).
+
+If you have been using R for any amount of time, you likely have had to install and utilize functions from an R package. In these notes, we will guide you through the fundamentals of creating your own R package. This process will not only be useful if you plan to develop your own code into a package but will also enhance your understanding of the R packages you employ in your research and how they are constructed.
+
+Many R users are familiar with the Comprehensive R Archive Network (CRAN), which is a vast repository hosting over 13,000 published R packages. These packages are made available to the R community and can be installed in RStudio using the `install.packages` function. However, not every R package needs to be or should be uploaded to CRAN. Packages can also be uploaded to and downloaded from GitHub, or even constructed for personal use—many researchers maintain personal R packages with documented functions they regularly utilize in their research.
+
+In this tutorial, we will take you through the steps to write a simple R package, explain how you can upload it to GitHub, and download it from GitHub. We will focus exclusively on package development in RStudio for simplicity and efficiency, although it is also possible to develop packages using the command line. 
+
 ## The most basic R package
+This would be a scenario where you would like to include two functions. The first function is to convert temperatures from degrees Fahrenheit to degrees Celsius, while the second function will convert temperatures from degrees Celsius to degrees Fahrenheit. 
+
+The first thing we need to do is to create an new folder inside of our R package repository called `R`. 
+
+In R studio, you can click on the button `New Folder`. The following box shows up. 
+
+ADD BOX
+
+Now name the folder `R` and click oke.
+
+ADD image
+
+In R studio you now see the folder.
+
+ADD image
+
+Next, we have to add an R script. You can click `File > New File > R script`.
+
+![Open R script](images/open_r_script.png)
+
+An files called `Untitleed1` opens. Click on the save button and give the R script a name. 
+
+![Save R script](images/save_r_script.png)
+
+Give your R script a name, select the `R` folder as the location for the file and click `Save`. This `R` folder is the folder where you will store actual R scripts with the coded functions. Within this folder you can save as many R scripts, `.R` files, as you like. And each of these `.R`. files can have as any functions you want. You could, for example, give each function its own file.
+
+![Name R script](images/name_r_script.png)
+
+In your R repository environment you should now see the file within the R folder.
+
+ADD IMAGE
+
+
+
+
+
+
+
+
+```{r}
+convert_Fahrenheid_to_Celsius <- function(F_temp){
+    C_temp <- (F_temp - 32) * 5/9;
+    return(C_temp);
+}
+
+convert_Celsius_to_Fahrenheid <- function(C_temp){
+    F_temp <- (C_temp * 9/5) + 32;
+    return(F_temp);
+}
+
+```
+
+### Coding convention side note
+
+ADD text about recommended coding conventions
+
+
+## 
+
+
 
 
 #### Acknowledgement
@@ -51,3 +122,5 @@ You might need to restart Rstudio after installing the above packages.
 This session is (originally) created for the EsCHER workshop: **EsCHER's R-evolution: Mastering R Package Development for Health Economics** hosted at Erasmus School of Health Policy and Management on April 23rd.
 
 We thank EsCHER for the funding for this workshop. More about EsCHER can be found here: <https://www.eur.nl/en/research/research-groups-initiatives/escher>
+
+For text editing and spellingcheck we made use of ChatGPT 4.
