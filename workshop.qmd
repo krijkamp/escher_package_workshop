@@ -1,0 +1,53 @@
+---
+title: "Afternoon workshop"
+editors: "Eline Krijkamp, Frederick Thielen and Gianluca Baio"
+---
+
+Welcome, in this session we will get our hands dirty with some coding in R. The aim of this session is to empower you with skills to that make you able to build a (basic) R package. In order to achieve that, this tutorial is a you step-by-step guide. The material is inspired by the tutorial published by Brad Duthie via: <https://ourcodingclub.github.io/tutorials/writing-r-package/#github> which is part of the Coding Club. We like to thank Brad and the Coding Club for providing his work open source for reuse.
+
+## Let's get started
+
+Do you want to go fast? Go alone? Do you want to go far? Work together! The saying is true, and especially with coding. However, the aim of developing a package is that your code is used by others. Therefore, we really recommend you to work together. In the end your code is more often read than written and you better make sure that your logic is also understood by others. So please, if you have not found a partner in crime at this stage, search for a buddy. Let's us know if you need help.
+
+## Making a new R project
+
+To get started with an R packages including documentation, it is best to create a new R project. To do this first open Rstudio. In Rstudio, go to `File > New Project...`; the box below should show up.
+
+#### ![New project start window](images/new_project.png)
+
+Select the option `New Directory`. The following box should appear.
+
+#### ![New project pop up](images/new_project_pop_up.png)
+
+Select the option `New Project` \####![New project new repo](images/new_project_select_new_repo.png)
+
+Now give your directory a name and Browse on your computer for a good place for this R package to live. And click on `Create Project`.
+
+#### ![New project select repo + name](images/new_project_name_repo.png)
+
+You will now find this folder and R project on the location you set the directory. Quite likely, the project did even open in R studio. You will notice this by having the Directory Name in your right top corner of R studio.
+
+#### ![R project open](images/R_project_opened.png)
+
+Within the folder, the R project is shown as a file ending with `.Rproj` .
+
+## Install required packages
+Before we begin, we need to install the `devtools` and `roxygen2` packages. `Devtools` includes a comprehensive set of tools essential for package development, and `roxygen2` facilitates the creation of documentation.
+
+```{r}
+install.packages("devtools")
+install.packages("roxygen2")
+```
+
+You might need to restart Rstudio after installing the above packages.
+
+## Why are we making an R package? What is it?
+
+## The most basic R package
+
+
+#### Acknowledgement
+
+This session is (originally) created for the EsCHER workshop: **EsCHER's R-evolution: Mastering R Package Development for Health Economics** hosted at Erasmus School of Health Policy and Management on April 23rd.
+
+We thank EsCHER for the funding for this workshop. More about EsCHER can be found here: <https://www.eur.nl/en/research/research-groups-initiatives/escher>
