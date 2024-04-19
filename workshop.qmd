@@ -130,7 +130,7 @@ Click on `Black File > Text File > name the file DESCRIPTION` and click `OK`
 Copy the following text to the DESCRIPTION.txt file and click `save`
 
 ```         
-Package: My R package EsCHER
+Package: eschereventpackage
 Type: Package
 Title: Temperature Conversion Package for Demonstration
 Version: 0.0.1.0
@@ -283,11 +283,35 @@ Note that putting the R package on GitHub is not a requirement, but it is probab
 
 *EsCHER workshop: if you are experiences with GitHub or your working computer restricts you from using it, you can also share your package via a .zipfile. Please read the section below about those instructions.*
 
-## 
+PLACE HOLDER HOW MUCH GUIDENCE ON GETTING TO GitHUB? 
+
+### Load a package from GitHub
+
+After an R package is public ally available, everyone can download it by using the `install_github` function in the `devtools` package. To do so, type the below into the RStudio console.
+
+```{r}
+library(devtools) # Make sure that the devtools library is loaded
+install_github("krijkamp/my_R_package_EsCHER_event_example") # Here you have to add the directory of the package
+
+```
+
+
+Our R package is now installed. We can start using it by reading it in as a normal package.
+
+Copy contents
+library(SCCTempConverter);
+F_to_C(30);
+That is it! We can share the location of the R package with colleagues who we think might make use of its R functions. If you want to you can stop here, but I will press on with a few more helpful tips and tricks in the next section.
+
+```{r}
+
+```
 
 ## Develop your own package
 
-You now have the basis knowledge to develop a package. Ready to develop your own? For now, you might like to start small, and just add one or two extra functions to the package you have already created.
+You now have the basis knowledge to develop a package. Ready to develop your own?
+
+[EsCHER workshop suggestions]{.underline}: Personalize your package by adding one or two extra functions to the current work. You can also think about adding a data set or do a visualization function. Add this function, add the description and 'publish' your package for the Peer review session.
 
 ## Peer review
 
